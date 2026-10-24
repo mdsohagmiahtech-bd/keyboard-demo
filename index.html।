@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Keyboard Input Demo</title>
+</head>
+<body>
+  <h2>কিবোর্ড ইনপুট পরীক্ষা</h2>
+
+  <label for="demo">এখানে নিজের লেখা টাইপ করুন:</label>
+  <input id="demo" type="text" placeholder="পরীক্ষামূলক লেখা">
+
+  <p>আপনার লেখা:</p>
+  <p id="output"></p>
+
+  <script>
+    const input = document.getElementById("demo");
+    const output = document.getElementById("output");
+
+    input.addEventListener("input", () => {
+      output.textContent = input.value;
+    });
+  </script>
+</body>
+</html>
